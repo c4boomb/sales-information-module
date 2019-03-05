@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Lev\SalesInformation\Api\Data\SalesInformationInterface"
+                type="Lev\SalesInformation\Model\SalesInformation"/>
+
+    <type name="Magento\Catalog\Api\ProductRepositoryInterface">
+        <plugin name="salesInformationAttribute"
+                type="Lev\SalesInformation\Plugin\SalesInformationAttribute" sortOrder="20"/>
+    </type>
+    <type name="Lev\SalesInformation\Model\SalesInformation">
+        <arguments>
+            <argument name="orderStatus" xsi:type="string">pending</argument>
+        </arguments>
+    </type>
+</config>

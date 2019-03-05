@@ -1,0 +1,22 @@
+{
+    "name": "lev/module-sales-information",
+    "description": "Adds sales information extension attribute to product",
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "php": "~7.1.3||~7.2.0",
+        "magento/framework": "*",
+        "magento/module-sales": "*",
+        "magento/module-customer": "*"
+    },
+    "type": "magento2-module",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Lev\\SalesInformation\\": ""
+        }
+    }
+}
